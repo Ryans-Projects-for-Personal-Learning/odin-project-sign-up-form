@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="script.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+    <div class="column">
+        <img id="backgroundImage" alt="image" src="./background-image.jpg">
+        <div class="logoOverlay">
+            <img id="logo" alt="logo" src="./odin-logo.png">
+            <h1 id="logoText">Sign Up Form</h1>
+        </div>
+    </div>
+    
+    
+    <div class="column registrationColumn">
+        <div class="introDiv">
+        <h1>Create an account</h1>
+
+        <p class="introText">Want to sign up for an account? This form does not actually work but enjoy its design! As it is purely front-end, there is not much form functionality aside from basic form validation.</p>
+        </div>
+        <div class="formDiv">
+            <h2>Fill out the information below.</h2>
+            <form id = "signUpForm" onsubmit="return false;">
+            <div class="formRow">
+                <div class="formColumnLeft">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="John" required><br>
+            </div>
+            <div class="formColumnRight">
+                <label for="lname">Last name: </label><br>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required><br>
+            </div>
+                </div>
+
+                <div class="formRow">
+                <div class="formColumnLeft">
+                <label for="email" id="email" name="email">Email:</label><br> 
+                <input type="email" id="email" title="Your email should be in the form of email@host.com." placeholder="johnsmith@email.com" required><br>
+                </div>
+
+                <div class="formColumnRight">
+                <label for="username" id="username" name="username">Username:</label><br> 
+                <input type="text" id="username" required placeholder="JohnSmith"><br>
+                </div>
+                </div>
+
+                <div class="formRow">
+                <div class="formColumnLeft">
+                <label for="password" id="password" name="password">Password:</label><br> 
+                <input type="password" id="password" required minlength="8" placeholder="********"><br>
+                </div>
+                <div class="formColumnRight">
+                <label for="confirmPassword" id="confirmPassword" name="password">Confirm Password:</label><br> 
+                <input type="password" id="confirmPassword" required placeholder="********"><br>
+                </div>
+                </div>
+                <button class="submitButton" onclick="comparePasswords(document.forms['signUpForm']['password'].value,document.forms['signUpForm']['confirmPassword'].value)">Create Account</button>
+            </form>
+            <p id="errorText">&nbsp;</p>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </div>
+    
+</div>
+</div>
+</body>
+</html>
